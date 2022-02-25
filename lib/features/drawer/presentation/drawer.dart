@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 
 final test = [
   Server(
-    name: 'Server 1',
+    name: '1🐷',
     imgUrl:
         'https://static.independent.co.uk/2020/09/22/09/Untitled.png?width=1200',
     channels: [
@@ -19,7 +19,7 @@ final test = [
     ],
   ),
   Server(
-    name: 'Server 2',
+    name: 'Game ',
     imgUrl: 'https://i.redd.it/e7zk3mde54021.jpg',
     channels: [
       Channel(
@@ -33,7 +33,7 @@ final test = [
     ],
   ),
   Server(
-    name: 'Server 2',
+    name: ' 333💩',
     imgUrl:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAvkwH3fKgR0hRne7z0VuhDCvxS9V4br_g7g&usqp=CAU',
     channels: [
