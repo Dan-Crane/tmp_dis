@@ -17,6 +17,7 @@ class ServeerIcon extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
           if (isActive)
             Container(
@@ -24,7 +25,7 @@ class ServeerIcon extends StatelessWidget {
               height: 40,
               margin: const EdgeInsets.only(right: 10),
               decoration: const BoxDecoration(
-                color: Colors.black,
+                color: Colors.white70,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(8.0),
                   bottomRight: Radius.circular(8.0),
@@ -35,7 +36,7 @@ class ServeerIcon extends StatelessWidget {
             const SizedBox(width: 16),
           CircleAvatar(
             backgroundImage: NetworkImage(urlPath),
-            radius: 30,
+            radius: 20,
           ),
         ],
       ),

@@ -16,13 +16,13 @@ class RoomsList extends StatelessWidget {
             final room = rooms[index];
 
             return Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.symmetric(vertical: 4.0),
               child: Text(
                 room.name,
-                style: Theme.of(context)
-                    .textTheme
-                    .headline6
-                    ?.copyWith(fontWeight: FontWeight.w800),
+                style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                      fontWeight: FontWeight.w800,
+                      color: Colors.white54,
+                    ),
               ),
             );
           },

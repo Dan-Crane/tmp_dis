@@ -37,23 +37,29 @@ class ChannelDroplist extends StatelessWidget {
                   Expanded(
                     child: Text(
                       channel.name,
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline4
-                          ?.copyWith(fontWeight: FontWeight.w800),
+                      style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                            color: Colors.white24,
+                          ),
                     ),
                   ),
-                  IconButton(
-                    onPressed: () => print('add channel'),
-                    padding: EdgeInsets.zero,
-                    iconSize: 20,
-                    icon: const Icon(Icons.add),
+                  InkWell(
+                    onTap: () => print('add channel'),
+                    child: const SizedBox(
+                      height: 30,
+                      width: 30,
+                      child: Icon(
+                        Icons.add,
+                        color: Colors.white24,
+                      ),
+                    ),
                   ),
                 ],
               ),
               collapsed: const SizedBox(),
               expanded: Padding(
-                padding: const EdgeInsetsDirectional.only(start: 20),
+                padding: const EdgeInsetsDirectional.only(start: 30),
                 child: RoomsList(rooms: channel.rooms),
               ),
             ),
