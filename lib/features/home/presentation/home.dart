@@ -6,9 +6,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      drawer: DiscordDrawer(),
-      body: Center(
+    return Scaffold(
+      appBar: AppBar(),
+      drawer: const DiscordDrawer(),
+      body: const Center(
         child: Text('Home Page'),
       ),
     );
