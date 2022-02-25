@@ -1,6 +1,8 @@
 import 'package:dis_flutter/features/channel/domain/entities/channel.dart';
+import 'package:dis_flutter/features/drawer/presentation/widgets/profile_panel/profile_panel.dart';
 import 'package:dis_flutter/features/drawer/presentation/widgets/selected_server.dart';
 import 'package:dis_flutter/features/drawer/presentation/widgets/server_list.dart';
+import 'package:dis_flutter/features/profile/domain/entities/profile.dart';
 import 'package:dis_flutter/features/room/domain/entities/room.dart';
 import 'package:dis_flutter/features/server/domain/entities/server.dart';
 import 'package:flutter/material.dart';
@@ -69,6 +71,11 @@ final test = [
   )
 ];
 
+final testProf = Profile(
+  name: 'The_day_before',
+  img: 'https://i.playground.ru/e/UGnALHJzcRerPVpafr8T0w.jpeg',
+);
+
 class DiscordDrawer extends StatefulWidget {
   const DiscordDrawer({Key? key}) : super(key: key);
 
@@ -77,6 +84,7 @@ class DiscordDrawer extends StatefulWidget {
 }
 
 class _DiscordDrawerState extends State<DiscordDrawer> {
+  final Profile profile = testProf;
   Server? selectedServer;
   List<Server> servers = test;
 
@@ -105,7 +113,8 @@ class _DiscordDrawerState extends State<DiscordDrawer> {
                 )
               ],
             ),
-          )
+          ),
+          ProfilePanel(profile: profile),
         ],
       ),
     );
