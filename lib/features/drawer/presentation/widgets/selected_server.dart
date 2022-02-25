@@ -26,13 +26,7 @@ class SelectedServer extends StatelessWidget {
               )
             : Column(
                 children: [
-                  Text(
-                    unwrapServer.name,
-                    style: Theme.of(context).textTheme.headline3?.copyWith(
-                          fontWeight: FontWeight.w600,
-                          color: Colors.white70,
-                        ),
-                  ),
+                  SelectedTitle(title: unwrapServer.name),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -41,6 +35,26 @@ class SelectedServer extends StatelessWidget {
                   ),
                 ],
               ),
+      ),
+    );
+  }
+}
+
+class SelectedTitle extends StatelessWidget {
+  final String title;
+  const SelectedTitle({Key? key, required this.title}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 48.0,
+      child: Text(
+        title,
+        softWrap: true,
+        style: Theme.of(context).textTheme.headline3?.copyWith(
+              fontWeight: FontWeight.w600,
+              color: Colors.white70,
+            ),
       ),
     );
   }

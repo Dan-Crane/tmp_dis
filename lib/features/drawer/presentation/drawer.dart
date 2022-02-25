@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 
 final test = [
   Server(
-    name: '1🐷',
+    name: 'test1🐷',
     imgUrl:
         'https://static.independent.co.uk/2020/09/22/09/Untitled.png?width=1200',
     channels: [
